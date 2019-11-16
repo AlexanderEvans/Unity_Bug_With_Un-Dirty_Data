@@ -18,7 +18,7 @@ public class MoveRightAutoPopulate : MonoBehaviour
     private void OnValidate()
     {
 #if UNITY_EDITOR
-        //only populate this if we aren't in a prefab(must be in scene) and we want to auto populate, and don't run in play mode
+        //only populate this if we aren't in a prefab(must be in scene), and don't run in play mode
         //as OnValidate() won't exist in builds and isn't called consistently on scene reloads
         if (gameObject.scene != new UnityEngine.SceneManagement.Scene() && !Application.isPlaying)
         {
